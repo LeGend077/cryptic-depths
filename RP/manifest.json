@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"LeGend077"
+		]
+	},
+	"header": {
+		"name": "Cryptic Depths Add-On",
+		"description": "Can you fight back the unleashed souls, wanting to take revenge from the world?",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "49089716-2c08-4f20-ab23-7375890948ac",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "3f94f41d-cb22-4e8f-a03a-c8530439a92b",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "c11b47e5-cef2-4154-9457-d2296d104d6a",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

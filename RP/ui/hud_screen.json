@@ -1,0 +1,123 @@
+{
+    "hud_display_actionbar": {
+        "type": "panel",
+        "controls": [
+            {
+                "soul_energy_progress_bar": {
+                    "type": "image",
+                    "texture": "textures/c_d/soul_empty",
+                    "size": [
+                        18,
+                        22
+                    ],
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "offset": "$offset",
+                    "$offset|default": [
+                        -2,
+                        0
+                    ],
+                    "variables": [
+                        {
+                            "requires": "($touch or $pocket_edition)",
+                            "offset": [
+                                -2,
+                                0
+                            ]
+                        },
+                        {
+                            "requires": "(not $touch or not $pocket_edition)",
+                            "offset": [
+                                -2,
+                                0
+                            ]
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "indicator": {
+                                "type": "image",
+                                "layer": 1,
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "texture": "textures/c_d/soul_full",
+                                "property_bag": {
+                                    "#actionbar_text": "$actionbar_text"
+                                },
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#actionbar_text = 'cryptic_depths:20')",
+                                        "target_property_name": "#visible"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "soul_energy_progress": {
+                                "type": "image",
+                                "texture": "textures/c_d/soul_energy",
+                                "alpha": 1,
+                                "size": [
+                                    14,
+                                    18
+                                ],
+                                "layer": 2,
+                                "clip_direction": "down",
+                                "clip_pixelperfect": false,
+                                "$max_energy": 20.0,
+                                "$one": 1.0,
+                                "property_bag": {
+                                    "#actionbar_text": "$actionbar_text"
+                                },
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "((#actionbar_text - 'cryptic_depths:') * $one)",
+                                        "target_property_name": "#soul_energy"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(($max_energy - #soul_energy)/$max_energy)",
+                                        "target_property_name": "#clip_ratio"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "hud_actionbar_text": {
+        "ignored": true
+    },
+    "root_panel": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "remove",
+                "control_name": "hud_actionbar_text_area"
+            },
+            {
+                "array_name": "controls",
+                "operation": "insert_back",
+                "value": [
+                    {
+                        "hud_display": {
+                            "type": "panel",
+                            "factory": {
+                                "name": "hud_actionbar_text_factory",
+                                "control_ids": {
+                                    "hud_actionbar_text": "hud_actionbar_text@hud.hud_display_actionbar"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

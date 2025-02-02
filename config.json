@@ -1,0 +1,46 @@
+{
+	"type": "minecraftBedrock",
+	"name": "Cryptic Depths Add-On",
+	"namespace": "cryptic_depths",
+	"authors": [
+		"LeGend077"
+	],
+	"targetVersion": "1.21.50",
+	"description": "Can you fight back the unleashed souls, wanting to take revenge from the world?",
+	"experimentalGameplay": {
+		"creationOfCustomBiomes": false,
+		"upcomingCreatorFeatures": false,
+		"enableGameTestFramework": false,
+		"focusTargetCamera": false,
+		"dataDrivenJigsawStructures": false,
+		"aimAssist": false,
+		"educationEdition": false
+	},
+	"bdsProject": false,
+	"packs": {
+		"behaviorPack": "./BP",
+		"resourcePack": "./RP"
+	},
+	"worlds": [
+		"./worlds/*"
+	],
+	"compiler": {
+		"plugins": [
+			"generatorScripts",
+			"typeScript",
+			"entityIdentifierAlias",
+			"customEntityComponents",
+			"customItemComponents",
+			"customBlockComponents",
+			"customCommands",
+			"moLang",
+			"formatVersionCorrection",
+			[
+				"simpleRewrite",
+				{
+					"packName": "Cryptic Depths Add-On"
+				}
+			]
+		]
+	}
+}
