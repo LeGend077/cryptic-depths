@@ -1,4 +1,6 @@
-import "./soul_energy.js";
+import "./mechanics/soul_energy.js";
+import "./blocks/customBlockComponents.js"
+import "./blocks/soul_altar.js";
 import { system } from "@minecraft/server";
 
 system.afterEvents.scriptEventReceive.subscribe(evd => {

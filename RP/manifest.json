@@ -6,8 +6,8 @@
 		]
 	},
 	"header": {
-		"name": "Cryptic Depths Add-On",
-		"description": "Can you fight back the unleashed souls, wanting to take revenge from the world?",
+		"name": "pack.name",
+		"description": "pack.description",
 		"min_engine_version": [
 			1,
 			21,
