@@ -80,8 +80,8 @@ const applyEnchantBlockComponent = {
         const equipment = player.getComponent("minecraft:equippable");
         const mainHandItem = equipment.getEquipment(EquipmentSlot.Mainhand);
 
-        if (mainHandItem?.typeId === 'cryptic_depths:soul_fire_enchantment_book' && block.permutation.getState('cryptic_depths:currentSelectedItemInAltar') === 'none') {
-            block.setPermutation(block.permutation.withState("cryptic_depths:currentSelectedItemInAltar", 'cryptic_depths:soul_fire_enchantment_book'));
+        if (mainHandItem?.typeId === 'cryptic_depths:soul_mending' && block.permutation.getState('cryptic_depths:currentSelectedItemInAltar') === 'none') {
+            block.setPermutation(block.permutation.withState("cryptic_depths:currentSelectedItemInAltar", 'cryptic_depths:soul_mending'));
 
             equipment.setEquipment(EquipmentSlot.Mainhand, undefined)
 
@@ -98,10 +98,23 @@ const applyEnchantBlockComponent = {
                 z: z + 0.5
             }, varMap);
         }
-        if (block.permutation.getState('cryptic_depths:currentSelectedItemInAltar') === 'cryptic_depths:soul_fire_enchantment_book' && !(mainHandItem?.typeId === 'cryptic_depths:soul_fire_enchantment_book')) {
+        if (block.permutation.getState('cryptic_depths:currentSelectedItemInAltar') === 'cryptic_depths:soul_mending' && !(mainHandItem?.typeId === 'cryptic_depths:soul_mending') && !mainHandItem?.typeId.includes('_sword')) {
 
             block.setPermutation(block.permutation.withState("cryptic_depths:currentSelectedItemInAltar", 'none'));
-            player.dimension.spawnItem(new ItemStack("cryptic_depths:soul_fire_enchantment_book", 1), player.location)
+            player.dimension.spawnItem(new ItemStack("cryptic_depths:soul_mending", 1), player.location)
+        }
+
+        if (block.permutation.getState('cryptic_depths:currentSelectedItemInAltar') === 'cryptic_depths:soul_mending' && mainHandItem?.typeId.includes('_sword')) {
+
+            block.setPermutation(block.permutation.withState("cryptic_depths:currentSelectedItemInAltar", 'none'));
+            block.dimension.spawnParticle("cryptic_depths:enchantment_magic_particle", {
+                x: x + 0.5,
+                y: y + (9 / 16),
+                z: z + 0.5
+            });
+            const item = mainHandItem.clone()
+            item.setLore(['§e§m§s§m§r§7Soul Mending§r'])
+            equipment.setEquipment(EquipmentSlot.Mainhand, item)
         }
     }
 }

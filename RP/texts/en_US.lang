@@ -1,8 +1,6 @@
 item.cryptic_depths:soul_shard=Soul Shard
 tile.cryptic_depths:soul_altar.name=§bSoul Altar§r
-item.cryptic_depths:soul_fire_enchantment_book=Enchanted Book\n§7Soul Fire§r
-
-ui.soul_altar.same_item_warning=[Info] Soul Altar is already holding the current item!
+item.cryptic_depths:soul_mending=Enchanted Book\n§7Soul Mending§r
 
 pack.name=Cryptic Depths Add-On | Resource Pack
 pack.description=Can you fight back the unleashed souls, waiting to take revenge from the world?

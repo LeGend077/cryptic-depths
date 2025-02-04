@@ -1,5 +1,5 @@
 {
-    "format_version": "1.21.50",
+    "format_version": "1.21.40",
     "minecraft:block": {
         "description": {
             "identifier": "cryptic_depths:soul_altar",
@@ -18,7 +18,7 @@
             "states": {
                 "cryptic_depths:currentSelectedItemInAltar": [
                     "none",
-                    "cryptic_depths:soul_fire_enchantment_book"
+                    "cryptic_depths:soul_mending"
                 ]
             }
         },
@@ -37,7 +37,7 @@
                 }
             },
             {
-                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'cryptic_depths:soul_fire_enchantment_book'",
+                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'cryptic_depths:soul_mending'",
                 "components": {
                     "minecraft:geometry": {
                         "identifier": "geometry.soul_altar",

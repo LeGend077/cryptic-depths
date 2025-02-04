@@ -1,5 +1,5 @@
 {
-    "format_version": "1.20.80",
+    "format_version": "1.21.40",
     "minecraft:item": {
         "description": {
             "identifier": "cryptic_depths:soul_shard",

@@ -4,9 +4,6 @@
     "texture_data": {
         "soul_shard": {
             "textures": "textures/items/soul_shard"
-        },
-        "soul_fire_enchantment_book": {
-            "textures": "textures/items/book_enchanted"
         }
     }
 }
