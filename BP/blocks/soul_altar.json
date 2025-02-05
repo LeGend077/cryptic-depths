@@ -102,7 +102,7 @@
             "minecraft:tick": {
                 "interval_range": [
                     40,
-                    60
+                    45
                 ],
                 "looping": true
             },

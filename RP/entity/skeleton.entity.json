@@ -5,7 +5,8 @@
       "identifier": "minecraft:skeleton",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "entity_emissive_alpha"
+        "default": "skeleton",
+        "emissive": "entity_emissive_alpha"
       },
       "textures": {
         "default": "textures/entity/skeleton/skeleton",

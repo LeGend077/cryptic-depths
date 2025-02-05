@@ -8,12 +8,18 @@
             "Texture.default",
             "Texture.infected"
           ]
+        },
+        "materials": {
+          "Array.material_variants": [
+            "Material.default",
+            "Material.emissive"
+          ]
         }
       },
       "geometry": "Geometry.default",
       "materials": [
         {
-          "*": "Material.default"
+          "*": "Array.material_variants[query.variant]"
         }
       ],
       "textures": [

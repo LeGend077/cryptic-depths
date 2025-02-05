@@ -1,4 +1,5 @@
 import { ItemStack, MolangVariableMap, Player, system, world } from "@minecraft/server";
+import { soulMending } from "./enchantments.js"
 
 system.runInterval(() => {
     // Range of Soul Energy 0-20
@@ -11,24 +12,25 @@ system.runInterval(() => {
             player.setDynamicProperty("soul_energy", 0);
         }
         // Set its display on screen
-        player.onScreenDisplay.setActionBar(`cryptic_depths:${player.getDynamicProperty("soul_energy")}`);
+        player.onScreenDisplay.setTitle(`cryptic_depths:${player.getDynamicProperty("soul_energy")}`);
     });
 }, 1);
 
 world.afterEvents.entityDie.subscribe(ev => {
     const { damageSource, deadEntity } = ev;
     // Functions to do if Player kills a mob 
-    if (!damageSource.damagingEntity instanceof Player) return;
+    if (damageSource.damagingEntity instanceof Player) {
 
-    const new_energy = damageSource.damagingEntity?.getDynamicProperty("soul_energy") + 1;
-    damageSource.damagingEntity?.setDynamicProperty("soul_energy", new_energy);
+        const new_energy = damageSource.damagingEntity?.getDynamicProperty("soul_energy") + 1;
+        damageSource.damagingEntity?.setDynamicProperty("soul_energy", new_energy);
 
-    const varMap = new MolangVariableMap();
-    varMap.setVector3('direction', { x: 0, y: 1, z: 0 });
+        const varMap = new MolangVariableMap();
+        varMap.setVector3('direction', { x: 0, y: 1, z: 0 });
 
-    deadEntity.dimension.spawnParticle("minecraft:soul_particle", deadEntity.location, varMap);
+        deadEntity.dimension.spawnParticle("minecraft:soul_particle", deadEntity.location, varMap);
 
-    Math.random() < 0.2 ? deadEntity.dimension.spawnItem(new ItemStack("cryptic_depths:soul_shard", 1), deadEntity.location) : 0;
+        Math.random() < 0.2 ? deadEntity.dimension.spawnItem(new ItemStack("cryptic_depths:soul_shard", 1), deadEntity.location) : 0;
+    } else { return }
 });
 
 world.afterEvents.entityHurt.subscribe(ev => {
@@ -38,6 +40,9 @@ world.afterEvents.entityHurt.subscribe(ev => {
         // Decrease Soul Energy of Player if hurt
         const new_energy = hurtEntity.getDynamicProperty('soul_energy') - 1;
         hurtEntity.setDynamicProperty('soul_energy', new_energy);
+
+        // Enchantment
+        soulMending(damage, hurtEntity)
 
     } else { return }
 })

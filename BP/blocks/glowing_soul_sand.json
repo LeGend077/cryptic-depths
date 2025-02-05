@@ -1,0 +1,41 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:block": {
+        "description": {
+            "identifier": "cryptic_depths:glowing_soul_sand",
+            "menu_category": {
+                "category": "nature",
+                "is_hidden_in_commands": false
+            }
+        },
+        "components": {
+            "minecraft:geometry": "geometry.full_block",
+            "minecraft:collision_box": true,
+            "minecraft:selection_box": true,
+            "minecraft:material_instances": {
+                "*": {
+                    "ambient_occlusion": true,
+                    "render_method": "alpha_test",
+                    "texture": "glowing_soul_sand"
+                }
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 0.5
+            },
+            "minecraft:light_emission": 3,
+            "minecraft:friction": 0.1,
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.5,
+                "item_specific_speeds": [
+                    {
+                        "item": {
+                            "tags": "query.all_tags('minecraft:is_shovel')"
+                        },
+                        "destroy_speed": 0.266
+                    }
+                ]
+            },
+            "tag:minecraft:is_shovel_item_destructible": {}
+        }
+    }
+}

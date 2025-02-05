@@ -1,0 +1,16 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:single_block_feature": {
+        "description": {
+            "identifier": "cryptic_depths:glowing_soul_sand_feature"
+        },
+        "places_block": {
+            "name": "cryptic_depths:glowing_soul_sand"
+        },
+        "enforce_survivability_rules": false,
+        "enforce_placement_rules": false,
+        "may_replace": [
+            "minecraft:grass" // The block can only replace grass
+        ]
+    }
+}

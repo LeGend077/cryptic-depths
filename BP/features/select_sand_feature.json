@@ -1,0 +1,22 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "cryptic_depths:select_sand_feature"
+        },
+        "features": [
+            [
+                "cryptic_depths:soul_sand_feature", // weighs 5
+                5
+            ],
+            [
+                "cryptic_depths:glowing_soul_sand_feature", // weighs 3
+                3
+            ],
+            [
+                "cryptic_depths:netherrack_feature",
+                4
+            ]
+        ]
+    }
+}

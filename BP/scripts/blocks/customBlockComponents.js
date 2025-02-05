@@ -1,8 +1,11 @@
-import { world, EquipmentSlot, ItemStack, MolangVariableMap } from "@minecraft/server";
+import { world, EquipmentSlot, ItemStack, MolangVariableMap, Block } from "@minecraft/server";
 
 // Soul Altar Block Components
 
-function ruinParticles(block) {
+/**
+ * @param {Block} block
+ */
+function runeParticles(block) {
     const { x, y, z } = block.location
     const varMap = new MolangVariableMap();
     varMap.setVector3('direction', { x: 0, y: 1, z: 0 });
@@ -85,9 +88,9 @@ const applyEnchantBlockComponent = {
 
             equipment.setEquipment(EquipmentSlot.Mainhand, undefined)
 
-            ruinParticles(block)
-            ruinParticles(block)
-            ruinParticles(block)
+            runeParticles(block)
+            runeParticles(block)
+            runeParticles(block)
             const varMap = new MolangVariableMap();
             varMap.setVector3('direction', { x: 0, y: 1, z: 0 });
 
@@ -115,6 +118,8 @@ const applyEnchantBlockComponent = {
             const item = mainHandItem.clone()
             item.setLore(['§e§m§s§m§r§7Soul Mending§r'])
             equipment.setEquipment(EquipmentSlot.Mainhand, item)
+
+            player.playSound('insert_enchanted.chiseled_bookshelf')
         }
     }
 }
