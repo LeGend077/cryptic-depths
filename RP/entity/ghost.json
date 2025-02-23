@@ -1,0 +1,34 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cryptic_depths:ghost",
+            "geometry": {
+                "default": "geometry.ghost"
+            },
+            "scripts": {
+                "animate": [
+                    "walk_controller"
+                ]
+            },
+            "spawn_egg": {
+                "overlay_color": "#bdd1d1",
+                "base_color": "#9fb3b3"
+            },
+            "animations": {
+                "walk_controller": "controller.animation.ghost.walk",
+                "idle": "animation.ghost.idle",
+                "wander": "animation.ghost.wander"
+            },
+            "materials": {
+                "default": "entity_alphablend"
+            },
+            "textures": {
+                "default": "textures/entity/ghost"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

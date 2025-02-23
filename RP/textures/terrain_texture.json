@@ -1,0 +1,14 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "cryptic-depths",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"soul_altar": {
+			"textures": "textures/blocks/soul_altar"
+		},
+		"glowing_soul_sand": {
+			"textures": "textures/blocks/glowing_soul_sand"
+		}
+	}
+}

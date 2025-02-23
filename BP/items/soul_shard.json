@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "cryptic_depths:soul_shard"
+        },
+        "components": {
+            "minecraft:icon": "soul_shard",
+            "minecraft:allow_off_hand": true,
+            "minecraft:max_stack_size": 16
+        }
+    }
+}
