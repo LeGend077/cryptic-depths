@@ -1,9 +1,0 @@
-{
-    "resource_pack_name": "cryptic-depths",
-    "texture_name": "atlas.items",
-    "texture_data": {
-        "soul_shard": {
-            "textures": "textures/items/soul_shard"
-        }
-    }
-}
