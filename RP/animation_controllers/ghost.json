@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ghost.walk": {
+			"initial_state": "standing",
+			"states": {
+				"standing": {
+					"blend_transition": 0.2,
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"moving": "q.modified_move_speed > 0.1"
+						}
+					]
+				},
+				"moving": {
+					"blend_transition": 0.2,
+					"animations": [
+						"wander"
+					],
+					"transitions": [
+						{
+							"standing": "q.modified_move_speed < 0.1"
+						}
+					]
+				}
+			}
+		}
+	}
+}
