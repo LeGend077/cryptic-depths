@@ -1,0 +1,70 @@
+{
+    "format_version": "1.21.60",
+    "minecraft:crafting_items_catalog": {
+        "categories": [
+            {
+                "category_name": "equipment",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.pickaxe"
+                        },
+                        "items": [
+                            "cryptic_depths:soul_pickaxe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.sword"
+                        },
+                        "items": [
+                            "cryptic_depths:soul_sword"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.axe"
+                        },
+                        "items": [
+                            "cryptic_depths:soul_axe"
+                        ]
+                    },
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.shovel"
+                        },
+                        "items": [
+                            "cryptic_depths:soul_shovel"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "nature",
+                "groups": [
+                    {
+                        "group_identifier": {
+                            "name": "minecraft:itemGroup.name.ore"
+                        },
+                        "items": [
+                            "cryptic_depths:soul_shard_ore",
+                            "cryptic_depths:deepslate_soul_shard_ore"
+                        ]
+                    }
+                ]
+            },
+            {
+                "category_name": "items",
+                "groups": [
+                    {
+                        "items": [
+                            "cryptic_depths:soul_shard",
+                            "cryptic_depths:soul_altar",
+                            "cryptic_depths:soul_residue"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

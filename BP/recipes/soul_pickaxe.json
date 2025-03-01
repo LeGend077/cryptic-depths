@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cryptic_depths:soul_pickaxe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "X": {
+                "item": "cryptic_depths:soul_shard"
+            },
+            "Y": {
+                "item": "minecraft:stick"
+            }
+        },
+        "pattern": [
+            "XXX",
+            " Y ",
+            " Y "
+        ],
+        "result": {
+            "item": "cryptic_depths:soul_pickaxe"
+        },
+        "unlock": [
+            {
+                "item": "cryptic_depths:soul_shard"
+            }
+        ]
+    }
+}

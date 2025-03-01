@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cryptic_depths:soul_shovel"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "X": {
+                "item": "cryptic_depths:soul_shard"
+            },
+            "Y": {
+                "item": "minecraft:stick"
+            }
+        },
+        "pattern": [
+            "X",
+            "Y",
+            "Y"
+        ],
+        "result": {
+            "item": "cryptic_depths:soul_shovel"
+        },
+        "unlock": [
+            {
+                "item": "cryptic_depths:soul_shard"
+            }
+        ]
+    }
+}

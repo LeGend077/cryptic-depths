@@ -1,0 +1,24 @@
+{
+	"resource_pack_name": "cryptic-depths",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"cryptic_depths:soul_shard": {
+			"textures": "textures/items/soul_shard"
+		},
+		"cryptic_depths:soul_residue": {
+			"textures": "textures/items/soul_residue"
+		},
+		"cryptic_depths:soul_pickaxe": {
+			"textures": "textures/items/soul_pickaxe"
+		},
+		"cryptic_depths:soul_sword": {
+			"textures": "textures/items/soul_sword"
+		},
+		"cryptic_depths:soul_axe": {
+			"textures": "textures/items/soul_axe"
+		},
+		"cryptic_depths:soul_shovel": {
+			"textures": "textures/items/soul_shovel"
+		}
+	}
+}

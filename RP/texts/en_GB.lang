@@ -1,0 +1,17 @@
+item.cryptic_depths:soul_shard=Soul Shard
+item.cryptic_depths:soul_mending=Enchanted Book\n§7Soul Mending§r
+item.cryptic_depths:soul_residue=Soul Residue
+item.cryptic_depths:soul_pickaxe=Soul Pickaxe
+item.cryptic_depths:soul_sword=Soul Sword
+item.cryptic_depths:soul_axe=Soul Axe
+item.cryptic_depths:soul_shovel=Soul Shovel
+
+tile.cryptic_depths:soul_altar.name=§bSoul Altar§r
+tile.cryptic_depths:soul_shard_ore.name=Soul Shard Ore
+tile.cryptic_depths:deepslate_soul_shard_ore.name=Deepslate Soul Shard Ore
+
+entity.cryptic_depths:ghost.name=Ghost
+item.spawn_egg.entity.cryptic_depths:ghost.name=Spawn Ghost
+
+pack.name=Cryptic Depths Add-On | Resource Pack
+pack.description=Can you fight back the unleashed souls, waiting to take revenge from the world?
