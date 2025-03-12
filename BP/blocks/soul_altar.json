@@ -11,6 +11,10 @@
                 }
             },
             "states": {
+                "cryptic_depths:activated": [
+                    false,
+                    true
+                ],
                 "cryptic_depths:currentSelectedItemInAltar": [
                     "none",
                     "cryptic_depths:soul_mending"
@@ -19,27 +23,46 @@
         },
         "permutations": [
             {
-                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'none'",
+                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'none' && query.block_state('cryptic_depths:activated') == false",
                 "components": {
                     "minecraft:geometry": {
                         "identifier": "geometry.soul_altar",
                         "bone_visibility": {
-                            "base": true,
-                            "book": true,
-                            "enchanted_book": false
+                            "candle1": false,
+                            "candle2": false,
+                            "candle3": false,
+                            "candle4": false,
+                            "book": false
                         }
                     }
                 }
             },
             {
-                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'cryptic_depths:soul_mending'",
+                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'cryptic_depths:soul_mending' && query.block_state('cryptic_depths:activated') == true",
                 "components": {
                     "minecraft:geometry": {
                         "identifier": "geometry.soul_altar",
                         "bone_visibility": {
-                            "base": true,
-                            "book": true,
-                            "enchanted_book": true
+                            "candle1": true,
+                            "candle2": true,
+                            "candle3": true,
+                            "candle4": true,
+                            "book": true
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "query.block_state('cryptic_depths:currentSelectedItemInAltar') == 'none' && query.block_state('cryptic_depths:activated') == true",
+                "components": {
+                    "minecraft:geometry": {
+                        "identifier": "geometry.soul_altar",
+                        "bone_visibility": {
+                            "candle1": true,
+                            "candle2": true,
+                            "candle3": true,
+                            "candle4": true,
+                            "book": false
                         }
                     }
                 }
@@ -94,23 +117,24 @@
             }
         ],
         "components": {
-            "minecraft:tick": {
-                "interval_range": [
-                    40,
-                    45
-                ],
-                "looping": true
-            },
+            // "minecraft:tick": {
+            //     "interval_range": [
+            //         40,
+            //         45
+            //     ],
+            //     "looping": true
+            // },
             "minecraft:custom_components": [
-                "cryptic_depths:spawn_particle",
-                "cryptic_depths:apply_enchant"
+                "cryptic_depths:soulAltarBlockComponent"
             ],
             "minecraft:geometry": {
                 "identifier": "geometry.soul_altar",
                 "bone_visibility": {
-                    "base": true,
-                    "book": true,
-                    "enchanted_book": false
+                    "candle1": false,
+                    "candle2": false,
+                    "candle3": false,
+                    "candle4": false,
+                    "book": false
                 }
             },
             "minecraft:map_color": "#0250A3",
@@ -122,7 +146,7 @@
                 ],
                 "size": [
                     16,
-                    9,
+                    16,
                     16
                 ]
             },
@@ -142,7 +166,7 @@
                 ],
                 "size": [
                     16,
-                    9,
+                    16,
                     16
                 ]
             },
